@@ -32,4 +32,10 @@ void PrintValues(IEnumerable<Book> books)
 //PrintValues(linqQueries.BooksJavaOrderByTitle());
 
 //books pagecount > 450 desc
-PrintValues(linqQueries.BooksPageCountDesc());
+//PrintValues(linqQueries.BooksPageCountDesc());
+
+//Three books of java 
+//PrintValues(linqQueries.ThreeBooksJava());
+
+//
+PrintValues(linqQueries.TercerYCuartoDeMasDe400Pag());

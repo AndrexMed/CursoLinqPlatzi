@@ -61,5 +61,15 @@
         {
             return booksCollection.Where(x => x.PageCount > 450).OrderByDescending(x => x.PageCount);
         }
+
+        public IEnumerable<Book> ThreeBooksJava()
+        {
+            return booksCollection.Where(x => x.Categories.Contains("Java")).OrderByDescending(x => x.PublishedDate).Take(3);
+        }
+
+        public IEnumerable<Book> TercerYCuartoDeMasDe400Pag()
+        {
+            return booksCollection.Where(x => x.PageCount > 400).Take(4).Skip(2);
+        }
     }
 }
