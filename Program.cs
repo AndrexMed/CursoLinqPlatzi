@@ -10,4 +10,11 @@ void PrintValues(IEnumerable<Book> books)
     }
 }
 
-PrintValues(linqQueries.GetAllCollection());
+//Get All
+//PrintValues(linqQueries.GetAllCollection());
+
+//Libros despues del 2000
+//PrintValues(linqQueries.BooksBefore2000());
+
+//Books Filtered
+PrintValues(linqQueries.BooksFiltered());
