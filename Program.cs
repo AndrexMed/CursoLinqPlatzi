@@ -17,4 +17,10 @@ void PrintValues(IEnumerable<Book> books)
 //PrintValues(linqQueries.BooksBefore2000());
 
 //Books Filtered
-PrintValues(linqQueries.BooksFiltered());
+//PrintValues(linqQueries.BooksFiltered());
+
+//All books have status 
+//Console.WriteLine($"All books have status: {linqQueries.AllBooksHaveStatus()}");
+
+//Algun libro fue publicado en 2005? 
+Console.WriteLine($"One book publish in 2005: {linqQueries.OneBookPublishIn2005()}");

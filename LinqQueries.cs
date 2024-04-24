@@ -35,5 +35,16 @@
                          books.Title.Contains("in Action")
                    select books;
         }
+
+        public bool AllBooksHaveStatus()
+        {
+            return booksCollection.All(x => x.Status != string.Empty);
+        }
+
+        public bool OneBookPublishIn2005()
+        {
+            //Si un item cumple la cond retorna true.
+            return booksCollection.Any(x => x.PublishedDate.Year == 2005);
+        }
     }
 }
