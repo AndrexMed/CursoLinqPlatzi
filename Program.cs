@@ -24,3 +24,6 @@ void PrintValues(IEnumerable<Book> books)
 
 //Algun libro fue publicado en 2005? 
 Console.WriteLine($"One book publish in 2005: {linqQueries.OneBookPublishIn2005()}");
+
+//Libros que contengan python
+PrintValues(linqQueries.BooksOfPython());

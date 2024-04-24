@@ -46,5 +46,10 @@
             //Si un item cumple la cond retorna true.
             return booksCollection.Any(x => x.PublishedDate.Year == 2005);
         }
+
+        public IEnumerable<Book> BooksOfPython()
+        {
+            return booksCollection.Where(x => x.Categories.Contains("Python"));
+        }
     }
 }
