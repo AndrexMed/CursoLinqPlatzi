@@ -51,5 +51,15 @@
         {
             return booksCollection.Where(x => x.Categories.Contains("Python"));
         }
+
+        public IEnumerable<Book> BooksJavaOrderByTitle()
+        {
+            return booksCollection.Where(x => x.Categories.Contains("Java")).OrderBy(x => x.Title);
+        }
+
+        public IEnumerable<Book> BooksPageCountDesc()
+        {
+            return booksCollection.Where(x => x.PageCount > 450).OrderByDescending(x => x.PageCount);
+        }
     }
 }

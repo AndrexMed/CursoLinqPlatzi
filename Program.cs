@@ -23,7 +23,13 @@ void PrintValues(IEnumerable<Book> books)
 //Console.WriteLine($"All books have status: {linqQueries.AllBooksHaveStatus()}");
 
 //Algun libro fue publicado en 2005? 
-Console.WriteLine($"One book publish in 2005: {linqQueries.OneBookPublishIn2005()}");
+//Console.WriteLine($"One book publish in 2005: {linqQueries.OneBookPublishIn2005()}");
 
 //Libros que contengan python
-PrintValues(linqQueries.BooksOfPython());
+//PrintValues(linqQueries.BooksOfPython());
+
+//Libros de Java ORder by title
+//PrintValues(linqQueries.BooksJavaOrderByTitle());
+
+//books pagecount > 450 desc
+PrintValues(linqQueries.BooksPageCountDesc());
