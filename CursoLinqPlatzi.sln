@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34607.119
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CursoLinqPlatzi", "CursoLinqPlatzi.csproj", "{B15BD43A-2CF2-4D82-94A8-457DA3740580}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B15BD43A-2CF2-4D82-94A8-457DA3740580}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B15BD43A-2CF2-4D82-94A8-457DA3740580}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B15BD43A-2CF2-4D82-94A8-457DA3740580}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B15BD43A-2CF2-4D82-94A8-457DA3740580}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {959EA1EA-38EB-43C8-B29F-2A1FEDB1F721}
+	EndGlobalSection
+EndGlobal
