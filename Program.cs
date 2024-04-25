@@ -38,4 +38,10 @@ void PrintValues(IEnumerable<Book> books)
 //PrintValues(linqQueries.ThreeBooksJava());
 
 //
-PrintValues(linqQueries.TercerYCuartoDeMasDe400Pag());
+//PrintValues(linqQueries.TercerYCuartoDeMasDe400Pag());
+
+//Operador Sum
+//Console.WriteLine($"Sum: {linqQueries.MethodSum()}");
+
+//Operador Aggregate
+Console.WriteLine(linqQueries.MethodAggregate());

@@ -71,5 +71,27 @@
         {
             return booksCollection.Where(x => x.PageCount > 400).Take(4).Skip(2);
         }
+
+        public int MethodSum()
+        {
+            return booksCollection.Where(x => x.PageCount >= 0 && x.PageCount <= 500).Sum(x => x.PageCount);
+        }
+
+        public string MethodAggregate()
+        {
+            return booksCollection.Where(x => x.PublishedDate.Year > 2015)
+                .Aggregate("", (titulos, next) =>
+                {
+                    if (titulos != string.Empty)
+                    {
+                        titulos += " - " + next.Title;
+                    }
+                    else
+                    {
+                        titulos += next.Title;
+                    }
+                    return titulos;
+                });
+        }
     }
 }
