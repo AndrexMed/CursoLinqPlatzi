@@ -93,5 +93,10 @@
                     return titulos;
                 });
         }
+
+        public double Promedio()
+        {
+            return booksCollection.Average(x => x.Title.Length);
+        }
     }
 }

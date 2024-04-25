@@ -44,4 +44,7 @@ void PrintValues(IEnumerable<Book> books)
 //Console.WriteLine($"Sum: {linqQueries.MethodSum()}");
 
 //Operador Aggregate
-Console.WriteLine(linqQueries.MethodAggregate());
+//Console.WriteLine(linqQueries.MethodAggregate());
+
+//Promedio
+Console.WriteLine(linqQueries.Promedio());
