@@ -10,6 +10,20 @@ void PrintValues(IEnumerable<Book> books)
     }
 }
 
+void PrintValuesGroup(IEnumerable<IGrouping<int, Book>> booksListGroup)
+{
+    foreach (var grupo in booksListGroup)
+    {
+        Console.WriteLine("");
+        Console.WriteLine($"Grupo: {grupo.Key}");
+        Console.WriteLine("{0, -60} {1, 15} {2, 15}\n", "Titulo", "N. Paginas", "Fecha Publicacion");
+        foreach (var item in grupo)
+        {
+            Console.WriteLine("{0, -60} {1, 15} {2, 15}", item.Title, item.PageCount, item.PublishedDate);
+        }
+    }
+}
+
 //Get All
 //PrintValues(linqQueries.GetAllCollection());
 
@@ -47,4 +61,8 @@ void PrintValues(IEnumerable<Book> books)
 //Console.WriteLine(linqQueries.MethodAggregate());
 
 //Promedio
-Console.WriteLine(linqQueries.Promedio());
+//Console.WriteLine(linqQueries.Promedio());
+
+//Metodo GroupBy - Libros Publicados a partir del 2000 agrupados.
+
+PrintValuesGroup(linqQueries.MethodGroupBy());

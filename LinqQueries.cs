@@ -98,5 +98,10 @@
         {
             return booksCollection.Average(x => x.Title.Length);
         }
+
+        public IEnumerable<IGrouping<int, Book>> MethodGroupBy()
+        {
+            return booksCollection.Where(x => x.PublishedDate.Year >= 2000).GroupBy(x => x.PublishedDate.Year);
+        }
     }
 }
