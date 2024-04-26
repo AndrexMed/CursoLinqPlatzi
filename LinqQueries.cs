@@ -103,5 +103,10 @@
         {
             return booksCollection.Where(x => x.PublishedDate.Year >= 2000).GroupBy(x => x.PublishedDate.Year);
         }
+
+        public ILookup<char, Book> DiccionarioDeLibrosPorLetra()
+        {
+            return booksCollection.ToLookup(x => x.Title[0], x => x);
+        }
     }
 }

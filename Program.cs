@@ -24,6 +24,15 @@ void PrintValuesGroup(IEnumerable<IGrouping<int, Book>> booksListGroup)
     }
 }
 
+void PrintDiccionario(ILookup<char, Book> booksList, char Letra)
+{
+    Console.WriteLine("{0, -60} {1, 15} {2,15}\n", "Titulo", "N. Paginas", "Fecha publicacion");
+    foreach (var item in booksList[Letra])
+    {
+        Console.WriteLine("{0, -60} {1, 15} {2,15}", item.Title, item.PageCount, item.PublishedDate);
+    }
+}
+
 //Get All
 //PrintValues(linqQueries.GetAllCollection());
 
@@ -65,4 +74,8 @@ void PrintValuesGroup(IEnumerable<IGrouping<int, Book>> booksListGroup)
 
 //Metodo GroupBy - Libros Publicados a partir del 2000 agrupados.
 
-PrintValuesGroup(linqQueries.MethodGroupBy());
+//PrintValuesGroup(linqQueries.MethodGroupBy());
+
+//Method Lookup
+var listaBooks = linqQueries.DiccionarioDeLibrosPorLetra();
+PrintDiccionario(listaBooks, 'S');
